@@ -1,6 +1,6 @@
 package com.mybatisplus.demo.test;
 
-import com.mybatisplus.demo.enums.GenderType;
+import com.mybatisplus.demo.enums.GenderTypeEnum;
 import com.mybatisplus.demo.model.domain.User;
 import com.mybatisplus.demo.service.UserService;
 import lombok.extern.slf4j.Slf4j;
@@ -23,7 +23,7 @@ public class UserServiceTest {
         User entity = new User();
         entity.setPwd("456789");
         entity.setUserName("name2");
-        entity.setGender(GenderType.MALE);
+        entity.setGender(GenderTypeEnum.MALE);
         userService.save(entity);
         log.info("id = {}", entity.getId());
     }

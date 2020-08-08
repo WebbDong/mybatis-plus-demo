@@ -3,8 +3,8 @@ package com.mybatisplus.demo.test;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.mybatisplus.demo.enums.GenderType;
-import com.mybatisplus.demo.enums.UserType;
+import com.mybatisplus.demo.enums.GenderTypeEnum;
+import com.mybatisplus.demo.enums.UserTypeEnum;
 import com.mybatisplus.demo.mapper.UserMapper;
 import com.mybatisplus.demo.model.domain.User;
 import lombok.extern.slf4j.Slf4j;
@@ -37,8 +37,8 @@ public class UserMapperTest {
             entity.setId(null);
             entity.setUserName("name" + i);
             entity.setPwd("123456" + i);
-            entity.setGender(i % 2 == 0 ? GenderType.MALE : GenderType.FEMALE);
-            entity.setUserType(i % 2 == 0 ? UserType.MERCHANT : UserType.CUSTOMER);
+            entity.setGender(i % 2 == 0 ? GenderTypeEnum.MALE : GenderTypeEnum.FEMALE);
+            entity.setUserType(i % 2 == 0 ? UserTypeEnum.MERCHANT : UserTypeEnum.CUSTOMER);
             userMapper.insert(entity);
         }
     }

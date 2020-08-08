@@ -3,13 +3,13 @@ package com.mybatisplus.demo.enums;
 import com.baomidou.mybatisplus.annotation.EnumValue;
 import com.fasterxml.jackson.annotation.JsonValue;
 
-public enum UserType {
+public enum UserTypeEnum {
 
     CUSTOMER(0, "客户"),
     MERCHANT(1, "商家"),
     ;
 
-    UserType(int code, String name) {
+    UserTypeEnum(int code, String name) {
         this.code = code;
         this.name = name;
     }

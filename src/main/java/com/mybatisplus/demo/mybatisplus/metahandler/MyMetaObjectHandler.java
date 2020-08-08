@@ -1,7 +1,7 @@
 package com.mybatisplus.demo.mybatisplus.metahandler;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
-import com.mybatisplus.demo.enums.LogicDeletedStatus;
+import com.mybatisplus.demo.enums.LogicDeletedStatusEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.reflection.MetaObject;
 import org.springframework.stereotype.Component;
@@ -19,7 +19,7 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
     public void insertFill(MetaObject metaObject) {
         this.strictInsertFill(metaObject, "createTime", LocalDateTime.class, LocalDateTime.now());
         this.strictInsertFill(metaObject, "updateTime", LocalDateTime.class, LocalDateTime.now());
-        this.strictInsertFill(metaObject, "deleted", Integer.class, LogicDeletedStatus.NOT_DELETED.getCode());
+        this.strictInsertFill(metaObject, "deleted", Integer.class, LogicDeletedStatusEnum.NOT_DELETED.getCode());
     }
 
     @Override

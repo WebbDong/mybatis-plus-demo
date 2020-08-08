@@ -1,12 +1,12 @@
 package com.mybatisplus.demo.enums;
 
-public enum LogicDeletedStatus {
+public enum LogicDeletedStatusEnum {
 
     NOT_DELETED(0, "未删除"),
     DELETED(1, "已删除"),
     ;
 
-    LogicDeletedStatus(int code, String name) {
+    LogicDeletedStatusEnum(int code, String name) {
         this.code = code;
         this.name = name;
     }

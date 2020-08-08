@@ -5,8 +5,8 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.mybatisplus.demo.base.BaseEntity;
-import com.mybatisplus.demo.enums.GenderType;
-import com.mybatisplus.demo.enums.UserType;
+import com.mybatisplus.demo.enums.GenderTypeEnum;
+import com.mybatisplus.demo.enums.UserTypeEnum;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -43,13 +43,13 @@ public class User extends BaseEntity {
     /**
      * 性别
      */
-    private GenderType gender;
+    private GenderTypeEnum gender;
 
     /**
      * 用户类型
      */
     @JSONField(serialzeFeatures= SerializerFeature.WriteEnumUsingToString) // 指明使用Fastjson将枚举转换成json时，使用枚举的toString方法返回的值，可以重写toString来实现定制
-    private UserType userType;
+    private UserTypeEnum userType;
 
 
 }
