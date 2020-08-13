@@ -13,7 +13,7 @@ import java.io.Serializable;
 public abstract class BaseServiceImpl<M extends MyBaseMapper<D>, D> extends ServiceImpl<M, D> implements BaseService<D> {
 
     @Autowired
-    private M myBaseMapper;
+    protected M myBaseMapper;
 
     @Override
     public D getByIdIgnoreLogicDeleted(Serializable id) {
