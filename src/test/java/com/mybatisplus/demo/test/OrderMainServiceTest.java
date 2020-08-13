@@ -22,9 +22,10 @@ public class OrderMainServiceTest {
     @Test
     public void testSave() {
         OrderMain entity = new OrderMain();
-        entity.setName("测试订单1");
-        entity.setFee(Money.parse("CNY 69.99"));
+        entity.setName("购物订单");
+        entity.setFee(Money.parse("CNY 40.99"));
         entity.setCurrency("CNY");
+        entity.setVersion(0);
         orderMainService.save(entity);
         log.info("id = {}", entity.getId());
     }
