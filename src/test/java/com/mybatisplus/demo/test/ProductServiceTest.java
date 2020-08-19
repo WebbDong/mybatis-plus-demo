@@ -30,4 +30,10 @@ public class ProductServiceTest {
         }
     }
 
+    @Test
+    public void testGetById() {
+        Product product = productService.getById(1292019814142865410L);
+        log.info("{}", product);
+    }
+
 }

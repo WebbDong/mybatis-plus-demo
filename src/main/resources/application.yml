@@ -3,7 +3,7 @@ server:
 
 #spring:
 #  datasource:
-#    driverClassName: com.p6spy.engine.spy.P6SpyDriver
+#    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
 #    url: jdbc:p6spy:mysql://192.168.238.150:33006/my_test?useSSL=false&useUnicode=true&allowPublicKeyRetrieval=true&characterEncoding=utf8
 #    username: root
 #    password: 123456

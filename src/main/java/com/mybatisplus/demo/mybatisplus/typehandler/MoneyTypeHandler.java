@@ -22,7 +22,13 @@ public class MoneyTypeHandler extends BaseTypeHandler<Money> {
 
     @Override
     public Money getNullableResult(ResultSet rs, String columnName) throws SQLException {
-        return parseMoney(rs.getLong(columnName), rs.getString("currency"));
+        String currency;
+        try {
+            currency = rs.getString("currency");
+        } catch (SQLException e) {
+            currency = "CNY";
+        }
+        return parseMoney(rs.getLong(columnName), currency);
     }
 
     @Override
